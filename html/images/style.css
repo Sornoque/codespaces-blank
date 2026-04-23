@@ -117,6 +117,26 @@ section {
 }
 
 .about .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg);
+    gap: 1.5rem;
+}
+
+.about .row .container {
+    padding: 2rem;
+
+}
+
+.about .row .container h3 {
+    font-size: 2rem;
     color: black;
+}
+
+.about .row .container p {
+    font-size: 1.5rem;
+    color: #131313;
+    padding: 1rem 0;
+    line-height: 1.5;
 
 }
