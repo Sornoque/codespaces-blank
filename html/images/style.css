@@ -74,6 +74,10 @@ section {
     display: inline-block;
 }
 
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+
 .home-container {
     background: url("./img/IMG_3421.jpeg");
     height: 100vh;
@@ -104,10 +108,11 @@ section {
     padding: 1rem;
 }
 .title {
-    font-size: 5rem;
+    font-size: 4rem;
     color: #131313;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 4rem;
 
 }
 
