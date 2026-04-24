@@ -23,6 +23,7 @@ body {
   background: transparent;
   box-shadow: 0 10px 20px rgb(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
   z-index: 999; 
  }
 
@@ -39,9 +40,10 @@ body {
 .navbar-logo {
   font-size: 2rem;
   font-weight: 600;
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px
 }
 
 .navbar-container .navbar-menu {
@@ -53,7 +55,7 @@ body {
 
 .navbar-container .navbar-menu li a {
   text-decoration: none;
-  color: white;
+  color: #0f0f0f;
   font-size: 1.3rem;
   font-weight: 500;
   padding: 3px 20px;
@@ -65,9 +67,9 @@ body {
 
 .navbar-container .navbar-menu li a:hover,
 .navbar-container .navbar-menu li a.active{
-  color: #333;
-  background: rgba(188, 212, 229, 0.8);
-  border: 2px solid black;
+  color: white;
+  background: rgba(0, 0, 0, 0.18);
+  border: 2px solid white;
 }
 
 .navbar-toggle {
@@ -82,11 +84,11 @@ body {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  background: rgba(0, 0, 0, 0.5);
+  background: white;
   transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 800px) {
   .navbar {
   backdrop-filter: none;
 }
@@ -102,7 +104,7 @@ body {
   top: 0;
   right: 0;
   padding: 5rem 1.5rem;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 10px rgb(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
 }
 
@@ -129,7 +131,7 @@ body {
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .navbar-container {
     padding: 100%; 
 }
@@ -142,4 +144,24 @@ body {
   font-size: 1.2rem;
   padding: 3px 15px;
 }
+
+h1 { 
+  font-size: 2.5rem;
+  text-align: center;
+}
+p {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0 12px;
+}
+img {
+  max-widht: 100%;
+  height: auto;
+}
+
+home {
+  padding: 20px;
+  text-align: center;
+}
+
 }
