@@ -15,8 +15,13 @@
 body {
   font-family: "montserrat", serif;
   min-height: 100vh;
-  background-color: url(./html/images/IMG_3263.jpeg)
 }
+
+.bg-image {
+  position: absolute;
+  z-index: -1;
+}
+
 .navbar{
   display: flex;
   align-items: center;
@@ -66,7 +71,7 @@ section {
 .navbar-logo {
   font-size: 2rem;
   font-weight: 600;
-  color: #fff;
+  color: black;
   text-decoration: none;
   cursor: pointer;
 }
@@ -80,7 +85,7 @@ section {
 
 .navbar-container .navbar-menu li a {
   text-decoration: none;
-  color: #fff;
+  color: black;
   font-size: 1.3rem;
   font-weight: 500;
   padding: 3px 20px;
@@ -93,10 +98,24 @@ section {
 .navbar-container .navbar-menu li a:hover {
   color: #333;
   background: rgba(188, 212, 229, 0.8);
-  border: 2px solid #fff;
-
+  border: 2px solid black;
 }
 
+.navbar-toggle {
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
 
 .icons img {
   margin: 1rem;
@@ -180,4 +199,47 @@ section {
   color: #131313;
   padding: 1rem 0;
   line-height: 1.5;
+}
+
+@media (max-width: 880px) {
+  .navbar {
+  backdrop-filter: none;
+}
+
+.navbar-container .navbar-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.7rem !important;
+  position: absolute;
+  height: 100vh;
+  width: 250px;
+  top: 0;
+  right: 0;
+  padding: 5rem 1.5rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-container .navbar-menu.active {
+  display: flex;
+}
+
+.navbar-toggle {
+  display: block;
+  z-index: 999;
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(1){
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 }
