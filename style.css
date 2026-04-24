@@ -9,18 +9,27 @@
 * {
   margin: 0;
   padding: 0;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: 0.2s linear;
-  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: var(--main-color);
+  font-family: "montserrat", serif;
+  min-height: 100vh;
+  background-color: url(./html/images/IMG_3263.jpeg)
 }
-
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
 section {
   padding: 3rem 2rem;
   margin: 0 auto;
@@ -45,18 +54,49 @@ section {
   padding-bottom: 1.5;
 }
 
-.navbar a {
-  margin: 0 1;
-  font-size: 1.8;
-  color: black;
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 1600px;
 }
 
-.navbar a:hover {
-  color: black;
-  border-bottom: 0.1 solid var(--border);
-  padding-bottom: 0.5;
-  font-size: 1.3;
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
 }
+
+.navbar-container .navbar-menu {
+  display: flex;
+  text-align: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-container .navbar-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 3px 20px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
+}
+
+.navbar-container .navbar-menu li a:hover {
+  color: #333;
+  background: rgba(188, 212, 229, 0.8);
+  border: 2px solid #fff;
+
+}
+
 
 .icons img {
   margin: 1rem;
